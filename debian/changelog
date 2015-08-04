@@ -1,4 +1,4 @@
-linux-base (3.6) UNRELEASED; urgency=low
+linux-base (4.0) unstable; urgency=low
 
   * Remove obsolete postinst upgrade code and translations
     (Closes: #580435, #660670, #670775, #686211, #686384, #686431, #686445,
@@ -10,7 +10,7 @@ linux-base (3.6) UNRELEASED; urgency=low
   * perf: Update error message for missing perf executable, to refer to
     linux-perf-<version> for Linux 4.1 onward
 
- -- Ben Hutchings <ben@decadent.org.uk>  Tue, 01 May 2012 01:54:46 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 04 Aug 2015 21:09:10 +0100
 
 linux-base (3.5) unstable; urgency=low
 
