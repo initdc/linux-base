@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-HAVE_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH 2>/dev/null)
-
 build:
 ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
 	perl -Ilib -MTest::Harness -e 'runtests(@ARGV)' lib/t/*.t
@@ -15,11 +13,6 @@ binary-indep:
 	dh_testdir
 	dh_testroot
 	dh_prep
-ifneq (,$(HAVE_MULTIARCH))
-	echo linux-base:Multi-Arch=foreign >>debian/linux-base.substvars
-else
-	echo linux-base:Multi-Arch= >>debian/linux-base.substvars
-endif
 	dh_install
 	dh_installman
 	dh_installdebconf

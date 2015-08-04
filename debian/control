@@ -11,7 +11,7 @@ Vcs-Browser: http://svn.debian.org/viewvc/kernel/dists/trunk/linux-base/
 Package: linux-base
 Architecture: all
 Depends: ${misc:Depends}
-Multi-Arch: ${linux-base:Multi-Arch}
+Multi-Arch: foreign
 Description: Linux image base package
  This package contains files and support scripts for all Linux
  images.
