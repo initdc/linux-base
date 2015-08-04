@@ -1,9 +1,9 @@
 linux-base (3.6) UNRELEASED; urgency=low
 
   * Remove obsolete postinst upgrade code and translations
-    (Closes: #670775, #686211, #686384, #686431, #686445, #686459, #686480,
-     #686610, #686662, #686687, #686704, #686705, #686717, #686720, #686748,
-     #698203)
+    (Closes: #580435, #660670, #670775, #686211, #686384, #686431, #686445,
+     #686459, #686480, #686602, #686610, #686662, #686687, #686704, #686705,
+     #686717, #686720, #686748, #698203)
   * Run version_cmp() unit tests at build time
   * linux-version: Fix sorting of version strings containing -trunk
     (Closes: #761614)
