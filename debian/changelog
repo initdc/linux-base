@@ -1,3 +1,9 @@
+linux-base (4.0~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Hector Oron <zumbi@debian.org>  Fri, 14 Aug 2015 18:44:41 +0200
+
 linux-base (4.0) unstable; urgency=low
 
   * Remove obsolete postinst upgrade code and translations
