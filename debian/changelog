@@ -3,6 +3,7 @@ linux-base (4.1) UNRELEASED; urgency=medium
   * Adjust for migration to git:
     - Add .gitignore files
     - debian/control: Update Vcs-* fields (Closes: #824748)
+  * Add read_kernelimg_conf() function to Perl module
 
  -- Ben Hutchings <ben@decadent.org.uk>  Tue, 11 Aug 2015 19:12:59 +0200
 
