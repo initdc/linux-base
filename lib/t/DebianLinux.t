@@ -5,7 +5,7 @@ use Test;
 use DebianLinux qw(version_cmp read_kernelimg_conf);
 
 BEGIN {
-    plan test => 40;
+    plan test => 41;
 }
 
 ## version_cmp
@@ -89,7 +89,6 @@ ok(hash_equal(read_kernelimg_conf_str(''),
 	      {
 		  do_symlinks =>	1,
 		  image_dest =>		'/',
-		  link_in_boot =>	0,
 	      }));
 # Sample config
 ok(hash_equal(read_kernelimg_conf_str(<< 'EOT'),
@@ -133,20 +132,18 @@ EOT
 	      {
 		  do_symlinks =>	1,
 		  image_dest =>		'/',
-		  link_in_boot =>	0,
 	      }));
 # Slightly different spacing and value syntax
 ok(hash_equal(read_kernelimg_conf_str(<< 'EOT'),
 image_dest = foo bar
 	relink_build_link = yes
 do_symlinks = 0    
-    link_in_boot= true
+    link_in_boot= false
 no_symlinks=1
 EOT
 	      {
 		  do_symlinks =>	0,
 		  image_dest =>		'foo',
-		  link_in_boot =>	1,
 	      }));
 # Check that 'false' and 'no' also work
 ok(hash_equal(read_kernelimg_conf_str(<< 'EOT'),
@@ -155,7 +152,6 @@ EOT
 	      {
 		  do_symlinks =>	0,
 		  image_dest =>		'/',
-		  link_in_boot =>	0,
 	      }));
 ok(hash_equal(read_kernelimg_conf_str(<< 'EOT'),
 do_symlinks = no
@@ -163,7 +159,6 @@ EOT
 	      {
 		  do_symlinks =>	0,
 		  image_dest =>		'/',
-		  link_in_boot =>	0,
 	      }));
 # Check that invalid values have no effect
 ok(hash_equal(read_kernelimg_conf_str(<< 'EOT'),
@@ -174,5 +169,13 @@ EOT
 	      {
 		  do_symlinks =>	1,
 		  image_dest =>		'/',
-		  link_in_boot =>	0,
+	      }));
+# Check link_in_boot dominates image_dest
+ok(hash_equal(read_kernelimg_conf_str(<< 'EOT'),
+image_dest = /local
+link_in_boot = true
+EOT
+	      {
+		  do_symlinks =>	1,
+		  image_dest =>		'/boot',
 	      }));

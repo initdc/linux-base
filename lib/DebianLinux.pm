@@ -159,6 +159,11 @@ sub read_kernelimg_conf {
     }
     delete $conf->{no_symlinks};
 
+    if ($conf->{link_in_boot}) {
+	$conf->{image_dest} = '/boot';
+    }
+    delete $conf->{link_in_boot};
+
     return $conf;
 }
 
