@@ -24,7 +24,7 @@ use FileHandle;
 BEGIN {
     use Exporter ();
     our @ISA = qw(Exporter);
-    our @EXPORT_OK = qw(version_cmp image_list read_kernelimg_conf);
+    our @EXPORT_OK = qw(version_cmp image_stem image_list read_kernelimg_conf);
 }
 
 sub version_split {
@@ -79,6 +79,10 @@ if ((uname())[4] =~ /^(?:mips|parisc|powerpc|ppc)/) {
     $image_stem = 'vmlinux';
 } else {
     $image_stem = 'vmlinuz';
+}
+
+sub image_stem {
+    return $image_stem;
 }
 
 sub image_list {
