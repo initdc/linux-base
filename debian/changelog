@@ -5,6 +5,7 @@ linux-base (4.2) UNRELEASED; urgency=medium
   * Add manual page for linux-update-symlinks
   * read_kernelimg_conf(): Quietly ignore settings used only by kernel-package
   * debian/rules: Add build-{arch,indep} targets
+  * debian/control: Update policy version to 3.9.8; no changes required
 
  -- Ben Hutchings <ben@decadent.org.uk>  Sun, 05 Jun 2016 02:21:25 +0100
 
