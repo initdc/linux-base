@@ -102,6 +102,11 @@ sub read_kernelimg_conf {
     # These are still set in the jessie installer even though they
     # have no effect.  Ignore them quietly.
     my @quiet_param = qw(do_bootloader do_initrd);
+    # These are used only by kernel-package, and are not relevant to
+    # anything that linux-base does.  Ignore them quietly.
+    push @quiet_param, qw(clobber_modules force_build_link
+                          relink_build_link relink_src_link
+                          silent_modules warn_reboot);
 
     # Initialise configuration to defaults
     my $conf = {
