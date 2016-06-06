@@ -22,6 +22,7 @@ binary-indep:
 	dh_installdebconf
 	dh_installchangelogs
 	dh_installdocs
+	dh_lintian
 	dh_strip
 	dh_compress
 	dh_fixperms
