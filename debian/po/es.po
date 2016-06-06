@@ -30,8 +30,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: linux-2.6 2.6.32+5\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-26 23:36+0000\n"
+"Report-Msgid-Bugs-To: linux-base@packages.debian.org\n"
+"POT-Creation-Date: 2016-06-06 16:37+0100\n"
 "PO-Revision-Date: 2014-07-24 17:59-0300\n"
 "Last-Translator: Matías Bellone <matiasbellone+debian@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -41,15 +41,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Type: boolean
+#. Type: title
 #. Description
 #: ../linux-base.templates:2001
+msgid "Removing ${package}"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../linux-base.templates:3001
 msgid "Abort kernel removal?"
 msgstr "¿Desea cancelar la eliminación del núcleo?"
 
 #. Type: boolean
 #. Description
-#: ../linux-base.templates:2001
+#: ../linux-base.templates:3001
 msgid ""
 "You are running a kernel (version ${running}) and attempting to remove the "
 "same version."
@@ -59,7 +65,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../linux-base.templates:2001
+#: ../linux-base.templates:3001
 msgid ""
 "This can make the system unbootable as it will remove /boot/vmlinuz-"
 "${running} and all modules under the directory /lib/modules/${running}. This "
@@ -73,7 +79,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../linux-base.templates:2001
+#: ../linux-base.templates:3001
 msgid ""
 "It is highly recommended to abort the kernel removal unless you are prepared "
 "to fix the system after removal."

@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: linux 3.14.12-2\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-26 23:36+0000\n"
+"Report-Msgid-Bugs-To: linux-base@packages.debian.org\n"
+"POT-Creation-Date: 2016-06-06 16:37+0100\n"
 "PO-Revision-Date: 2014-07-18 12:28+0200\n"
 "Last-Translator: Slavko <linux@slavino.sk>\n"
 "Language-Team: slovenčina <linux@slavino.sk>\n"
@@ -23,15 +23,21 @@ msgstr ""
 "X-POFile-SpellExtra: version zavádzača abiname MIPS vmlinuz-\n"
 "X-POFile-SpellExtra: localversion\n"
 
-#. Type: boolean
+#. Type: title
 #. Description
 #: ../linux-base.templates:2001
+msgid "Removing ${package}"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../linux-base.templates:3001
 msgid "Abort kernel removal?"
 msgstr "Prerušiť odstraňovanie jadra?"
 
 #. Type: boolean
 #. Description
-#: ../linux-base.templates:2001
+#: ../linux-base.templates:3001
 msgid ""
 "You are running a kernel (version ${running}) and attempting to remove the "
 "same version."
@@ -41,7 +47,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../linux-base.templates:2001
+#: ../linux-base.templates:3001
 msgid ""
 "This can make the system unbootable as it will remove /boot/vmlinuz-"
 "${running} and all modules under the directory /lib/modules/${running}. This "
@@ -54,7 +60,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../linux-base.templates:2001
+#: ../linux-base.templates:3001
 msgid ""
 "It is highly recommended to abort the kernel removal unless you are prepared "
 "to fix the system after removal."
