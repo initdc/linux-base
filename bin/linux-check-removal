@@ -90,9 +90,17 @@ sub check {
 	$ENV{'DEBIAN_FRONTEND'} ne 'noninteractive') {
 	use Debconf::Client::ConfModule qw(:all);
 
+	my $title = 'linux-base/removing-title';
 	my $question = "linux-base/removing-running-kernel";
 	my ($ret, $seen, $answer);
 
+	# debconf only generates a title automatically when used directly
+	# from a maintainer script.  Also, the automatic title says we are
+	# 'configuring' a package but we're not.
+	($ret) = settitle($title);
+	if ($ret) {
+	    die "Failed to set title: $ret";
+	}
 	($ret) = fset($question, 'seen', 'false');
 	if ($ret) {
 	    die "Failed to reset seen flag for $question: $ret";
@@ -100,6 +108,10 @@ sub check {
 	($ret) = reset($question);
 	if ($ret) {
 	    die "Failed to reset answer for $question: $ret";
+	}
+	($ret) = subst($question, 'package', $ENV{DPKG_MAINTSCRIPT_PACKAGE});
+	if ($ret) {
+	    die "Failed to substitute package name in title: $ret";
 	}
 	($ret) = subst($question, 'running', $running);
 	if ($ret) {

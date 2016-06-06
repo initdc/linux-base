@@ -7,6 +7,10 @@
 # Even minor modifications require translation updates and such
 # changes should be coordinated with translators and reviewers.
 
+Template: linux-base/removing-title
+Type: title
+_Description: Removing ${package}
+
 Template: linux-base/removing-running-kernel
 Type: boolean
 Default: true
