@@ -1,9 +1,9 @@
-linux-base (4.3) UNRELEASED; urgency=medium
+linux-base (4.3) unstable; urgency=medium
 
   * Add linux-check-removal command for use by package prerm scripts
     - Override lintian warning and error for this unusual debconf usage
 
- -- Ben Hutchings <ben@decadent.org.uk>  Mon, 06 Jun 2016 04:10:01 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 06 Jun 2016 17:06:15 +0100
 
 linux-base (4.2) unstable; urgency=medium
 
