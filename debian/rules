@@ -1,6 +1,10 @@
 #!/usr/bin/make -f
 
-build:
+build: build-arch build-indep
+
+build-arch:
+
+build-indep:
 ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
 	perl -Ilib -MTest::Harness -e 'runtests(@ARGV)' lib/t/*.t
 endif
@@ -18,6 +22,7 @@ binary-indep:
 	dh_installdebconf
 	dh_installchangelogs
 	dh_installdocs
+	dh_lintian
 	dh_strip
 	dh_compress
 	dh_fixperms
