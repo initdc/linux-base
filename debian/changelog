@@ -1,6 +1,10 @@
 linux-base (4.4) UNRELEASED; urgency=medium
 
-  * Update Portugese translation (Closes: 826779; thanks to Américo Monteiro)
+  * Update debconf template translations:
+    - Portugese (Américo Monteiro) (Closes: #826779)
+    - Polish (Łukasz Dulny)
+    - Japanese (Victory)
+    - Russian (Yuri Kozlov) (Closes: #828772)
   * linux-check-removal: Fix substitution of package name in debconf title
 
  -- Ben Hutchings <ben@decadent.org.uk>  Wed, 08 Jun 2016 23:18:06 +0100
