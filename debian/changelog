@@ -2,7 +2,7 @@ linux-base (4.4) UNRELEASED; urgency=medium
 
   [ Ben Hutchings ]
   * Update debconf template translations:
-    - Portugese (Américo Monteiro) (Closes: #826779)
+    - Portuguese (Américo Monteiro) (Closes: #826779)
     - Polish (Łukasz Dulny)
     - Japanese (Victory)
     - Russian (Yuri Kozlov) (Closes: #828772)
