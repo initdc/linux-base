@@ -11,6 +11,8 @@ linux-base (4.4) UNRELEASED; urgency=medium
   [ Salvatore Bonaccorso ]
   * Update Swedish debconf template translation.
     Thanks to Martin Bagge <brother@bsnet.se> (Closes: #828725)
+  * Update Czech debconf template translation.
+    Thanks to Michal Simunek <michal.simunek@gmail.com> (Closes: #828944)
 
  -- Ben Hutchings <ben@decadent.org.uk>  Wed, 08 Jun 2016 23:18:06 +0100
 

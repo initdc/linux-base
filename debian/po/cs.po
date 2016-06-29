@@ -1,14 +1,14 @@
-# Czech PO debconf template translation of linux.
+# Czech PO debconf template translation of linux-base.
 # Copyright (C) 2010 Michal Simunek <michal.simunek@gmail.com>
-# This file is distributed under the same license as the linux package.
-# Michal Simunek <michal.simunek@gmail.com>, 2010 - 2014.
+# This file is distributed under the same license as the linux-base package.
+# Michal Simunek <michal.simunek@gmail.com>, 2010 - 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: linux 3.14.12-2\n"
+"Project-Id-Version: linux-base 4.4\n"
 "Report-Msgid-Bugs-To: linux-base@packages.debian.org\n"
 "POT-Creation-Date: 2016-06-06 16:37+0100\n"
-"PO-Revision-Date: 2014-07-17 11:02+0200\n"
+"PO-Revision-Date: 2016-06-27 11:02+0200\n"
 "Last-Translator: Michal Simunek <michal.simunek@gmail.com>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
 "Language: cs\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. Description
 #: ../linux-base.templates:2001
 msgid "Removing ${package}"
-msgstr ""
+msgstr "Odstraňuje se ${package}"
 
 #. Type: boolean
 #. Description
@@ -46,7 +46,7 @@ msgid ""
 "can only be fixed with a copy of the kernel image and the corresponding "
 "modules."
 msgstr ""
-"To může způsobit, že se nepodaří zavést systém, a také bude odstraněno /boot/"
+"To může způsobit, že se nepodaří zavést systém, jelikož bude odstraněno /boot/"
 "vmlinuz-${running} a všechny moduly v adresáři /lib/modules/${running}. Toto "
 "je možné opravit pouze nakopírováním obrazu jádra a příslušných modulů."
 
