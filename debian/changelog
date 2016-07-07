@@ -7,6 +7,7 @@ linux-base (4.4) UNRELEASED; urgency=medium
     - Japanese (Victory)
     - Russian (Yuri Kozlov) (Closes: #828772)
     - German (Markus Hiereth)
+    - French (Jean-Pierre Giraud) (Closes: #830171)
   * linux-check-removal: Fix substitution of package name in debconf title
 
   [ Salvatore Bonaccorso ]
