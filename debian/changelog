@@ -1,3 +1,10 @@
+linux-base (4.5) UNRELEASED; urgency=medium
+
+  * Update Danish debconf template translation.
+    Thanks to Joe Dalton <joedalton2@yahoo.dk> (Closes: #830587)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 14 Jul 2016 19:58:02 +0200
+
 linux-base (4.4) unstable; urgency=medium
 
   [ Ben Hutchings ]

@@ -1,14 +1,14 @@
 # Danish translation linux.
-# Copyright (C) 2014 the linux team.
+# Copyright (C) 2016 the linux team.
 # This file is distributed under the same license as the linux package.
-# Joe Hansen <joedalton2@yahoo.dk>, 2010, 2011, 2014.
+# Joe Hansen <joedalton2@yahoo.dk>, 2010, 2011, 2014, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linux\n"
 "Report-Msgid-Bugs-To: linux-base@packages.debian.org\n"
 "POT-Creation-Date: 2016-06-06 16:37+0100\n"
-"PO-Revision-Date: 2014-07-20 05:26+0100\n"
+"PO-Revision-Date: 2016-07-09 05:26+0100\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org> \n"
 "Language: da\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. Description
 #: ../linux-base.templates:2001
 msgid "Removing ${package}"
-msgstr ""
+msgstr "Fjerner ${package}"
 
 #. Type: boolean
 #. Description
@@ -47,7 +47,7 @@ msgid ""
 "can only be fixed with a copy of the kernel image and the corresponding "
 "modules."
 msgstr ""
-"Dette kan gøre at systemet ikke kan starte op da det vil fjerne /boot/"
+"Dette kan gøre, at systemet ikke kan starte op, da det vil fjerne /boot/"
 "vmlinuz-${running} og alle moduler i mappen /lib/modules//${running}. Dette "
 "kan kun rettes med en kopi af kerneaftrykket og de tilsvarende moduler."
 
