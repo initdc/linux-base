@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the linux package.
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2010.
 # Fernando Ike de Oliveira (fike) <fike@midstorm.org>, 2013.
+# Diego Neves <diego@diegoneves.eti.br>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: linux 3.10.3-1\n"
 "Report-Msgid-Bugs-To: linux-base@packages.debian.org\n"
 "POT-Creation-Date: 2016-06-06 16:37+0100\n"
-"PO-Revision-Date: 2013-08-17 14:29+0200\n"
-"Last-Translator: Fernando Ike de Oliveira (fike) <fike@midstorm.org>\n"
+"PO-Revision-Date: 2016-06-29 19:27-0300\n"
+"Last-Translator: Diego Neves <diego@diegoneves.eti.br>\n"
 "Language-Team: Brazilian Portuguese <debian-l10n-portuguese@lists.debian."
 "org>\n"
 "Language: pt_BR\n"
@@ -18,13 +19,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"pt_BR utf-8\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. Type: title
 #. Description
 #: ../linux-base.templates:2001
 msgid "Removing ${package}"
-msgstr ""
+msgstr "Removendo ${package}"
 
 #. Type: boolean
 #. Description
