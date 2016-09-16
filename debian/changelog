@@ -9,6 +9,7 @@ linux-base (4.5) UNRELEASED; urgency=medium
   [ Ben Hutchings ]
   * Update Dutch debconf template translations (Frans Spiesschaert)
     (Closes: #837097)
+  * perf: Drop support for versions older than 3.2
 
  -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 14 Jul 2016 19:58:02 +0200
 
