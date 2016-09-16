@@ -1,37 +1,9 @@
 #!/usr/bin/make -f
 
-build: build-arch build-indep
+%:
+	dh $@
 
-build-arch:
-
-build-indep:
+override_dh_auto_test:
 ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
 	perl -Ilib -MTest::Harness -e 'runtests(@ARGV)' lib/t/*.t
 endif
-
-binary: binary-arch binary-indep
-
-binary-arch:
-
-binary-indep:
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_install
-	dh_installman
-	dh_installdebconf
-	dh_installchangelogs
-	dh_installdocs
-	dh_lintian
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_perl
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-clean:
-	dh_clean
