@@ -2,6 +2,8 @@ linux-base (4.6) UNRELEASED; urgency=medium
 
   * debian/control: Remove everyone else from Uploaders field, since no-one
     else has actually uploaded this
+  * Fix typo in linux-update-symlinks.1, thanks to Sven Joachim
+    (Closes: #876215)
 
  -- Ben Hutchings <ben@decadent.org.uk>  Wed, 16 Aug 2017 16:22:12 +0100
 
