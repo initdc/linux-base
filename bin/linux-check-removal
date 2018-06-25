@@ -58,8 +58,10 @@ BEGIN {
     }
 }
 
-# Are we in a container?  Check for $container in pid 1's environment.
+# Are we in a container?  Check for /run/systemd/container or
+# $container variable in pid 1's environment.
 sub in_container {
+    return 1 if -e "/run/systemd/container";
     my $res = 0;
     if (my $fh = new FileHandle('/proc/1/environ', 'r')) {
 	local $/ = "\0";
