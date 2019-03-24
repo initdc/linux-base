@@ -1,5 +1,6 @@
 .\" Hey, Emacs! This is an -*- nroff -*- source file.
 .\" Copyright (c) 2000 Manoj Srivastava <srivasta@debian.org>
+.\" Copyright 2019 Ben Hutchings <benh@debian.org>
 .\"
 .\" This is free documentation; you can redistribute it and/or
 .\" modify it under the terms of the GNU General Public License as
@@ -20,8 +21,6 @@
 .\" License along with this manual; if not, write to the Free
 .\" Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139,
 .\" USA.
-.\"
-.\" $Id: kernel-img.conf.5,v 1.25 2003/09/28 01:16:52 srivasta Exp $
 .\"
 .TH KERNEL\-IMG.CONF 5 "Aug 20 2009" "Debian" "Debian GNU/Linux manual"
 .\" NAME should be all caps, SECTION should be 1-8, maybe w/ subsection
@@ -250,17 +249,13 @@ issued. This is unset be default.
 .SH FILES
 The file described here is
 .IR /etc/kernel\-img.conf .
-Also, there are example scripts suitable for dropping into
+\fBkernel\-common\fR includes example scripts suitable for dropping into
 .IR /etc/kernel/*.d
 installed in
 .IR /usr/share/doc/kernel-common/examples .
 .SH "SEE ALSO"
-.BR make (1),
 .BR make\-kpkg (1),
-.BR kernel\-pkg.conf (5),
-.B The GNU Make manual
-.SH BUGS
-There are no bugs.  Any resemblance thereof is delirium. Really.
+.BR kernel\-pkg.conf (5)
 .SH AUTHOR
-This manual page was written by Manoj Srivastava <srivasta@debian.org>,
-for the Debian GNU/Linux system.
+This manual page was written by Manoj Srivastava <srivasta@debian.org>
+and Ben Hutchings <benh@debian.org> for the Debian GNU/Linux system.
