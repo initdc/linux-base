@@ -11,6 +11,7 @@ linux-base (4.6) UNRELEASED; urgency=medium
   * Add unit tests for image_list() function used by linux-version
   * Change image_list() to match /boot/vmlinu[xz]-* regardless of architecture
     (Closes: #925379)
+  * Take over kernel-img.conf(5) manual page from kernel-package
 
  -- Ben Hutchings <ben@decadent.org.uk>  Wed, 16 Aug 2017 16:22:12 +0100
 

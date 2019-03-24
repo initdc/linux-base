@@ -11,6 +11,8 @@ Vcs-Browser: https://salsa.debian.org/kernel-team/linux-base
 Package: linux-base
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: kernel-package (<= 13.018+nmu1)
+Replaces: kernel-package (<= 13.018+nmu1)
 Multi-Arch: foreign
 Description: Linux image base package
  This package contains files and support scripts for all Linux
