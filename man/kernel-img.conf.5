@@ -64,6 +64,48 @@ certain circumstances.
 .PP
 At the moment, the user modifiable variables supported are:
 .TP
+.B do_symlinks
+If set, the postinst and postrm scripts will maintain symlinks to
+default kernel and initramfs images, as described in
+\fIlinux\-update\-symlinks\fR(8).  This variable is set by default.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	supported
+Ubuntu linux source package	supported
+kernel\-package	ignored since v12.001;
+	previously supported
+.TE
+.TP
+.B image_dest
+Set this variable to the directory in which symlinks to the
+default kernel and initramfs images should be maintained.  The
+default value is \fI/\fR.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	supported
+Ubuntu linux source package	supported
+kernel\-package	ignored since v12.001;
+	previously supported
+.TE
+.TP
+.B link_in_boot
+If set, this has the same effect as \fIimage_dest\ =\ /boot\fR
+and overrides any other setting of \fBimage_dest\fR.  This
+variable is unset by default.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	supported
+Ubuntu linux source package	supported
+kernel\-package	ignored since v12.001;
+	previously supported
+.TE
+.TP
 .B postinst_hook
 .BR DEPRECATED :
 Set this variable to a script to be executed during installation. The
@@ -385,6 +427,7 @@ The file described here is
 installed in
 .IR /usr/share/doc/kernel-common/examples .
 .SH "SEE ALSO"
+.BR linux\-update\-symlinks (8),
 .BR make\-kpkg (1),
 .BR kernel\-pkg.conf (5)
 .SH AUTHOR
