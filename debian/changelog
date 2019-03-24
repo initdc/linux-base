@@ -9,6 +9,8 @@ linux-base (4.6) UNRELEASED; urgency=medium
     /run/systemd/container exists
   * linux-check-removal: Work around debconf cache management bug (see #908001)
   * Add unit tests for image_list() function used by linux-version
+  * Change image_list() to match /boot/vmlinu[xz]-* regardless of architecture
+    (Closes: #925379)
 
  -- Ben Hutchings <ben@decadent.org.uk>  Wed, 16 Aug 2017 16:22:12 +0100
 
