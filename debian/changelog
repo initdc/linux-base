@@ -17,6 +17,7 @@ linux-base (4.6) UNRELEASED; urgency=medium
     creators
   * kernel-img.conf(5): Document variables used by linux-update-symlinks
   * kernel-img.conf(5): Fix some spelling errors
+  * kernel-img.conf(5): Update the summary of what uses the file
 
  -- Ben Hutchings <ben@decadent.org.uk>  Wed, 16 Aug 2017 16:22:12 +0100
 
