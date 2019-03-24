@@ -36,6 +36,18 @@ is a simple file looked at by the kernel image post installation
 process to allow local options for handling some aspects of the
 installation, overriding the defaults built into the image itself.
 .PP
+Not all kernel image package creators support this file, or all the
+configuration variables.  Support status for the file itself is:
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	supported
+Ubuntu linux source package	supported
+kernel\-package	supported
+make deb\-pkg	ignored
+.TE
+.PP
 The format of the file is a simple
 .IB VAR = VALUE
 pair. Boolean values may be specified as
@@ -61,7 +73,8 @@ absolute path instead. Before calling this script, the env variable
 .B STEM
 shall be set to the value of the
 .I \-\-stem
-argument (or the default value, linux), and
+argument (or the default value, linux), and in packages created
+by kernel\-package
 .B KERNEL_PACKAGE_VERSION
 shall be set to the version of the kernel\-package that created the
 package.  This script shall be called with two arguments, the first
@@ -80,6 +93,16 @@ An example script for grub users is present in
 This script is run
 .I after
 the scripts in /etc/kernel/postinst.d directory.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	unsupported since v4.6.1-1;
+	previously supported
+Ubuntu linux source package	unsupported since v4.15.0-18.19;
+	previously supported
+kernel\-package	deprecated
+.TE
 .TP
 .B postrm_hook
 .BR DEPRECATED :
@@ -87,8 +110,8 @@ Set this variable to a script to be executed in the postrm (that is,
 after the image has been removed) after all the remove actions have
 been performed. The path can be a relative path if the script lives in
 a safe path -- that is, if it lives in /bin, /sbin, /usr/bin, or
-/usr/sbin, or must be an absolute path instead. The environment
-variable
+/usr/sbin, or must be an absolute path instead. In packages
+created by kernel\-package, the environment variable
 .B KERNEL_PACKAGE_VERSION
 shall be set to the version of the kernel\-package that created the
 package. This script shall be called with two arguments, the first
@@ -105,6 +128,16 @@ debconf does not restore stdout, so messages to stdout disappear.
 This script is run
 .I after
 the scripts in /etc/kernel/postrm.d directory.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	unsupported since v4.6.1-1;
+	previously supported
+Ubuntu linux source package	unsupported since v4.15.0-18.19;
+	previously supported
+kernel\-package	deprecated
+.TE
 .TP
 .B preinst_hook
 .BR DEPRECATED :
@@ -112,7 +145,8 @@ Set this variable to a script to be executed before the package is
 unpacked, and can be used to put in additional checks. The path can be
 a relative path if the script lives in a safe path -- that is, if it
 lives in /bin, /sbin, /usr/bin, or /usr/sbin, or must be an absolute
-path instead. The environment variable
+path instead. In packages created by kernel\-package, the
+environment variable
 .B KERNEL_PACKAGE_VERSION
 shall be set to the version of the kernel\-package that created the
 package. This script shall be called with two arguments, the first
@@ -124,6 +158,16 @@ of the kernel image itself.
 This script is run
 .I after
 the scripts in /etc/kernel/preinst.d directory.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	unsupported since v4.6.1-1;
+	previously supported
+Ubuntu linux source package	unsupported since v4.15.0-18.19;
+	previously supported
+kernel\-package	deprecated
+.TE
 .TP
 .B prerm_hook
 .BR DEPRECATED :
@@ -131,7 +175,8 @@ Set this variable to a script to be executed before the package files
 are removed (so any added files may be removed) . The path can be a
 relative path if the script lives in a safe path -- that is, if it
 lives in /bin, /sbin, /usr/bin, or /usr/sbin, or must be an absolute
-path instead. The environment variable
+path instead. In packages created by kernel\-package, the
+environment variable
 .B KERNEL_PACKAGE_VERSION
 shall be set to the version of the kernel\-package that created the
 package. This script shall be called with two arguments, the
@@ -148,6 +193,16 @@ debconf does not restore stdout, so messages to stdout disappear.
 This script is run
 .I after
 the scripts in /etc/kernel/prerm.d directory.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	unsupported since v4.6.1-1;
+	previously supported
+Ubuntu linux source package	unsupported since v4.15.0-18.19;
+	previously supported
+kernel\-package	deprecated
+.TE
 .TP
 .B src_postinst_hook
 .BR DEPRECATED :
@@ -171,6 +226,14 @@ postinst to fail.
 This script is run
 .I after
 the scripts in /etc/kernel/src_postinst.d directory.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	unsupported
+Ubuntu linux source package	unsupported
+kernel\-package	deprecated
+.TE
 .TP
 .B header_postinst_hook
 .BR DEPRECATED :
@@ -178,7 +241,8 @@ Unlike the other hook variables, this is meant for a script run during
 the post inst of a headers package only. The path can be a relative
 path if the script lives in a safe path -- that is, if it lives in
 /bin, /sbin, /usr/bin, or /usr/sbin, or must be an absolute path
-instead. The environment variable
+instead. In packages created by kernel\-package, the environment
+variable
 .B KERNEL_PACKAGE_VERSION
 shall be set to the version of the kernel\-package that created the
 package. This script shall be called with two arguments, the first
@@ -191,12 +255,29 @@ postinst to fail.
 This script is run
 .I after
 the scripts in /etc/kernel/header_postinst.d directory.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	unsupported
+Ubuntu linux source package	unsupported since v4.15.0-18.19;
+	previously supported
+kernel\-package	deprecated
+.TE
 .TP
 .B clobber_modules
 If set, the preinst shall silently try to move /lib/modules/version
 out of the way if it is the same version as the image being
 installed. Use at your own risk.
 This variable is unset by default.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	ignored
+Ubuntu linux source package	ignored
+kernel\-package	supported
+.TE
 .TP
 .B warn_reboot
 This variable can be used to turn off the warning given when
@@ -207,6 +288,14 @@ may not run correctly on the running kernel if the kernel ABI has
 changed in the meanwhile. It is a good idea to reboot, and this is a
 note to remind you. If you know what you are doing, you can set this
 variable to no. This variable is set by default.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	ignored
+Ubuntu linux source package	ignored
+kernel\-package	supported
+.TE
 .TP
 .B relink_build_link
 This option manipulates the build link created by recent kernels. If
@@ -214,6 +303,14 @@ the link is a dangling link, and if a the corresponding kernel headers
 appear to have been installed on the system, a new symlink shall be
 created to point to them. The default is to relink the build link
 (YES).
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	ignored
+Ubuntu linux source package	ignored
+kernel\-package	supported
+.TE
 .TP
 .B force_build_link
 This option manipulates the build link created by recent kernels. If
@@ -221,11 +318,27 @@ the link is a dangling link, a new symlink shall be created to point
 to kernel headers data in /usr/src, whether they have been installed or
 not. The default is unset, we don't create potentially dangling
 symlinks by default.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	ignored
+Ubuntu linux source package	ignored
+kernel\-package	supported
+.TE
 .TP
 .B relink_src_link
 This option manipulates the source link created by recent kernels. If
 the link is a dangling link it is deleted at install time. The default
 is to relink (delete) the source link (YES).
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	ignored
+Ubuntu linux source package	ignored
+kernel\-package	supported
+.TE
 .TP
 .B silent_modules
 This option has been put in for the people who are vastly irritated on
@@ -240,12 +353,30 @@ the directory is benign.  If you set this variable, you shall no
 longer be given a chance to abort if a preexisting modules directory
 .I /lib/modules/$version
 is detected.  This is unset by default.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	ignored
+Ubuntu linux source package	ignored
+kernel\-package	supported
+.TE
 .TP
 .B ignore_depmod_err
 If set, does not prompt to continue after a depmod problem in the
 postinstall script. This facilitates automated installs, though it may
 mask a problem with the kernel image. A diagnostic is still
 issued. This is unset be default.
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	unsupported since v4.4.1-1~exp1;
+	previously supported
+Ubuntu linux source package	unsupported since v4.15.0-18.19;
+	previously ignored
+kernel\-package	supported
+.TE
 .SH FILES
 The file described here is
 .IR /etc/kernel\-img.conf .
