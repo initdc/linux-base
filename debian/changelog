@@ -12,6 +12,7 @@ linux-base (4.6) UNRELEASED; urgency=medium
   * Change image_list() to match /boot/vmlinu[xz]-* regardless of architecture
     (Closes: #925379)
   * Take over kernel-img.conf(5) manual page from kernel-package
+    (Closes: #925415)
   * kernel-img.conf(5): Update various text to be independent of kernel-package
   * kernel-img.conf(5): Document differences in support between package
     creators
