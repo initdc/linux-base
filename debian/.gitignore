@@ -1,4 +1,6 @@
+/.debhelper
 /files
 /linux-base/
+/*.debhelper
 /*.debhelper.log
 /*.substvars
