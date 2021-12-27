@@ -5,6 +5,7 @@ linux-base (4.7) UNRELEASED; urgency=medium
   * po: de.po: Updated German man page translation.
     Thanks to Helge Kreutzmann (Closes: #977939)
   * Set Rules-Requires-Root to no
+  * Annotate test-only build dependencies with <!nocheck>
 
  -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 26 Dec 2021 23:45:18 +0100
 
