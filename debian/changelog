@@ -9,6 +9,8 @@ linux-base (4.7) UNRELEASED; urgency=medium
   * Annotate test-only build dependencies with <!nocheck>
   * debian/copyright: Convert to machine-readable format 1.0
   * Declare compliance with Debian policy 4.6.0
+  * postinst: Use 'set -e' in script body instead of passing -e to shell in
+    shebang line
 
   [ Debian Janitor ]
   * Bump debhelper from deprecated 9 to 13.
