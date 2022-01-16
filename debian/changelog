@@ -1,10 +1,10 @@
-linux-base (4.8) UNRELEASED; urgency=medium
+linux-base (4.8) unstable; urgency=medium
 
   * po: fr.po: Updated French man page translation (Closes: #1003731)
   * debian/copyright: Update copyright information for German and French
     translations
 
- -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 16 Jan 2022 17:23:23 +0100
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 16 Jan 2022 17:42:36 +0100
 
 linux-base (4.7) unstable; urgency=medium
 
