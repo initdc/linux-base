@@ -1,3 +1,9 @@
+linux-base (4.9) UNRELEASED; urgency=medium
+
+  * d/salsa-ci.yml: Add CI configuration for salsa.debian.org
+
+ -- Ben Hutchings <benh@debian.org>  Tue, 18 Jan 2022 02:11:57 +0100
+
 linux-base (4.8) unstable; urgency=medium
 
   * po: fr.po: Updated French man page translation (Closes: #1003731)
