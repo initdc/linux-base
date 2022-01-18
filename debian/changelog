@@ -1,6 +1,7 @@
 linux-base (4.9) UNRELEASED; urgency=medium
 
   * d/salsa-ci.yml: Add CI configuration for salsa.debian.org
+  * d/control: Use my debian.org email in Uploaders field
 
  -- Ben Hutchings <benh@debian.org>  Tue, 18 Jan 2022 02:11:57 +0100
 
