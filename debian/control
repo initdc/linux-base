@@ -12,7 +12,7 @@ Rules-Requires-Root: no
 Package: linux-base
 Architecture: all
 Depends: ${misc:Depends}
-Breaks: kernel-common (<= 13.018+nmu1)
+Breaks: kernel-common (<= 13.018+nmu1), linux-perf (<< 5.16.2-1~exp1)
 Replaces: kernel-common (<= 13.018+nmu1)
 Multi-Arch: foreign
 Description: Linux image base package
