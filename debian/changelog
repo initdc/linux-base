@@ -1,11 +1,16 @@
 linux-base (4.9) UNRELEASED; urgency=medium
 
+  [ Ben Hutchings ]
   * d/salsa-ci.yml: Add CI configuration for salsa.debian.org
   * d/control: Use my debian.org email in Uploaders field
   * Remove perf wrappers, as linux-perf now provides an unversioned perf
     command (Closes: #983314, #990165)
     - d/control: Add versioned Breaks on linux-perf to avoid leaving users
       with no perf command
+
+  [ dann frazier ]
+  * linux-version: Fix sorting of versions provided via stdin to match
+    the output when provided via argv (Closes: #987851)
 
  -- Ben Hutchings <benh@debian.org>  Tue, 18 Jan 2022 02:11:57 +0100
 
