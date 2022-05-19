@@ -12,6 +12,12 @@ linux-base (4.9) UNRELEASED; urgency=medium
   * linux-version: Fix sorting of versions provided via stdin to match
     the output when provided via argv (Closes: #987851)
 
+  [ Gioele Barabucci ]
+  * debian/NEWS: Remove outdated file
+  * po/fr: Store in canonical form
+  * debian/rules: Remove stray `--with bash-completion`
+  * debian/control: Remove unused dependency on `bash-completion`
+
  -- Ben Hutchings <benh@debian.org>  Tue, 18 Jan 2022 02:11:57 +0100
 
 linux-base (4.8) unstable; urgency=medium
