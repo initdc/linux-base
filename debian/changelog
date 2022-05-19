@@ -7,6 +7,8 @@ linux-base (4.9) UNRELEASED; urgency=medium
     command (Closes: #983314, #990165)
     - d/control: Add versioned Breaks on linux-perf to avoid leaving users
       with no perf command
+  * linux-version: Skip detached signature files when listing kernels
+    (Closes: #906873)
 
   [ dann frazier ]
   * linux-version: Fix sorting of versions provided via stdin to match
